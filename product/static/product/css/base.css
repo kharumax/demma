@@ -1,0 +1,92 @@
+body {
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    margin: 0;
+}
+header {
+    text-align: center;
+    height: 10%;
+    padding: 0 100px;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+.app-title {
+    display: inline-block;
+    font-style: italic;
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.app-title a {
+    color: black;
+}
+.all-search {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    left: 600px;
+}
+.input-aria {
+    width: 200px;
+    height: 28px;
+    border: black solid 1px;
+    background-color: white;
+    border-radius: 5px;
+}
+.submit-aria {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+}
+.submit-aria:hover {
+    background-color: cornflowerblue;
+}
+.navigator {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 350px;
+}
+.nav-item {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 16px;
+}
+.nav-item a {
+    color: black;
+    font-weight: 600;
+}
+.nav-item:last-child {
+    padding-right: 0;
+}
+.nav-item a:hover {
+    color: skyblue;
+    transition: 0.7s;
+}
+/*
+ヘッダーで必要な項目は
+・タイトル
+・検索窓
+・カテゴリ検索
+
+（ログイン時）
+・プロフィール
+・取引状態
+・ログアウト
+
+（未ログイン時）
+・新規登録
+・ログイン
+
+フッダー
+・お問い合わせ
+
+
+*/
+
+
+
+

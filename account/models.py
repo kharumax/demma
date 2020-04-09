@@ -57,6 +57,7 @@ class CustomUser(AbstractBaseUser,PermissionsMixin):
             "Activeとして扱われます"
         )
     )
+    activated_at = models.DateTimeField(blank=True,null=True)
     objects = CustomUserManager()
 
     EMAIL_FIELD = "email"
@@ -70,5 +71,10 @@ class CustomUser(AbstractBaseUser,PermissionsMixin):
     """userに対してメールを送る用のメソッド"""
     def email_user(self, subject, message, from_email=None, **kwargs):
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+    def activate(self):
+        self.is_active = True
+        self.activated_at = timezone.now()
+        self.save()
 
 

@@ -21,8 +21,14 @@
         <nav class="navigator">
             <ul class="navigator-items">
                 <li class="nav-item"><a href="">カテゴリ</a></li>
-                <li class="nav-item"><a href="">会員登録</a></li>
-                <li class="nav-item"><a href="">ログイン</a></li>
+                {% if user.is_active and user.is_authenticated %}
+                    <li class="nav-item"><a href="">マイページ</a></li>
+                    <li class="nav-item"><a href="">取引データ</a></li>
+                    <li class="nav-item"><a href="{% url 'account:logout' %}">ログアウト</a></li>
+                {% else %}
+                    <li class="nav-item"><a href="">会員登録</a></li>
+                    <li class="nav-item"><a href="">ログイン</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
